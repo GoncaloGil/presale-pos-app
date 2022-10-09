@@ -2,13 +2,19 @@ function HeaderTabs() {
   const tabs = ['Bebidas', 'Comidas', 'Diversos'];
 
   return (
-      <div className="btn-group btn-group-lg" role="group" aria-label="Tabs Buttons">
-        {tabs.map((tabItem) => (
-          <button type="button" class="btn btn-secondary">
-            {tabItem}
-          </button>
-        ))}
+    <div class="container" >
+      <div class="row">
+        <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups" >
+          {tabs.map((tabItem) => (
+            <div class="btn-group me-2" role="group">
+              <button type="button" class="btn btn-dark">
+                {tabItem}
+              </button>
+            </div>
+          ))}
+        </div>
       </div>
+    </div>
   )
 }
 
