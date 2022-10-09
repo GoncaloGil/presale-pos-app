@@ -1,18 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
 import HeaderTabs from './components/HeaderTabs';
+import ProductsGrid from './components/ProductsGrid'
+import ShoppingCart from './components/ShoppingCart'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <HeaderTabs />
-      </header>
-    </div>
+    <>
+      <HeaderTabs />
+      <div class="container">
+        <div class="row">
+          <div class="col-8">
+            <ProductsGrid />
+          </div>
+          <div class="col-4">
+            <ShoppingCart />
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
 
